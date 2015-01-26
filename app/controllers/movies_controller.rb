@@ -4,10 +4,9 @@ class MoviesController < ApplicationController
     render json: @movies
   end
   def search
-    search_params = {}
-    search_params[:title] = params["t"] if params["t"]
-    search_params[:year] = params["y"] if params["y"]
-    @movies = Movie.where(search_params)
+    @movies = (params["y"] ? Movie.where(year: params["y"]) : Movie.all)
+    @movies = @movies.map { |movie| movie if movie.title.downcase.include?(params["t"].downcase)  } if params["t"]
+    @movies.delete_if {|movie| !movie}
     render json: @movies
   end
 end
