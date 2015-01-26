@@ -68,7 +68,7 @@ movie_seeds = [
     title:"The Omega Man",
     year: 1971,
     plot:   "Army doctor Robert Neville struggles to create a cure for the plague that wiped out most of the human race.",
-    image_url:  "Army doctor Robert Neville struggles to create a cure for the plague that wiped out most of the human race.",
+    image_url:  "http://ia.media-imdb.com/images/M/MV5BMTQ5OTE3MjMzNV5BMl5BanBnXkFtZTcwMzI5MTYxMQ@@._V1_SX300.jpg",
   },
 ]
 
