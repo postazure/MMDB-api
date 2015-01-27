@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/all" => "movies#all"
   get "/search" => "movies#search"
   get "/tile" => "movies#tile"
+  get "/scrape" => "movies#scrape"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

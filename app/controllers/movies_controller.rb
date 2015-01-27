@@ -9,17 +9,17 @@ class MoviesController < ApplicationController
     render json: @movies
   end
   def tile
+    @movies = Movie.all
+  end
+  def scrape
     api_link_list = get_api_links("http://gschool.github.io/student-apis/")
 
-    # @api_movie_list = []
     api_link_list.each do |api_link|
       movies = parse_json(api_link)
       movies.each do |movie|
-        # @api_movie_list << movie
         add_to_db(movie)
       end
     end
-    @movies = Movie.all
   end
 
   private
